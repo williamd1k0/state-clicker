@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfvq3l7ouxiv"]
+
+[ext_resource type="Script" path="res://game/StoreLabel.gd" id="1_0571m"]
+[ext_resource type="Resource" uid="uid://dc8d2di2bfq0x" path="res://data/states/store-state.tres" id="2_13ojv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5rcba"]
+font_size = 26
+
+[node name="StoreLabel" type="Label"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -198.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = 86.0
+grow_horizontal = 0
+text = "Batch: %d
+Price: $%.2f"
+label_settings = SubResource("LabelSettings_5rcba")
+horizontal_alignment = 2
+script = ExtResource("1_0571m")
+store_state = ExtResource("2_13ojv")

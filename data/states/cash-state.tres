@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="CashState" load_steps=2 format=3 uid="uid://bgc10o1u1y8en"]
+
+[ext_resource type="Script" path="res://data/states/base/CashState.gd" id="1_jmdof"]
+
+[resource]
+script = ExtResource("1_jmdof")

@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bsvth77xqwbbf"]
+
+[ext_resource type="Script" path="res://game/AmountUpgradeBtn.gd" id="1_kkybt"]
+[ext_resource type="Resource" uid="uid://vo5fw218c1ms" path="res://data/states/upgrade-state.tres" id="2_1txdq"]
+[ext_resource type="Resource" uid="uid://bgc10o1u1y8en" path="res://data/states/cash-state.tres" id="3_evepg"]
+[ext_resource type="Resource" uid="uid://c20gka308ek5g" path="res://data/balancing/balancing.tres" id="4_xsker"]
+
+[node name="AmountUpgradeBtn" type="Button"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -60.5
+offset_top = -31.0
+offset_right = 60.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "Clicks +1 [$%.2f]"
+script = ExtResource("1_kkybt")
+upgrade_state = ExtResource("2_1txdq")
+cash_state = ExtResource("3_evepg")
+balancing = ExtResource("4_xsker")

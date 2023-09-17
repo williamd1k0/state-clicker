@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="UpgradeState" load_steps=2 format=3 uid="uid://vo5fw218c1ms"]
+
+[ext_resource type="Script" path="res://data/states/base/UpgradeState.gd" id="1_tpumb"]
+
+[resource]
+script = ExtResource("1_tpumb")
+auto_clicker_delay = 2.5

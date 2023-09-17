@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://0pbwgly32g7"]
+
+[ext_resource type="Script" path="res://game/ClickPopup.gd" id="1_bmy4j"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qxhdb"]
+font_size = 32
+
+[node name="ClickPopup" type="Label"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -24.0
+offset_right = 54.0
+offset_bottom = 24.0
+grow_vertical = 2
+text = "+%d"
+label_settings = SubResource("LabelSettings_qxhdb")
+script = ExtResource("1_bmy4j")

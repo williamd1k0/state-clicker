@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://clm5825tm2dsq"]
+
+[ext_resource type="Script" path="res://game/ClickCounter.gd" id="1_i7ufb"]
+[ext_resource type="Resource" uid="uid://lg7ku6kx4g24" path="res://data/states/click-state.tres" id="2_wlkk7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5rcba"]
+font_size = 26
+
+[node name="ClickCounter" type="Label"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 128.0
+offset_bottom = 49.0
+text = "Clicks: %d"
+label_settings = SubResource("LabelSettings_5rcba")
+script = ExtResource("1_i7ufb")
+click_state = ExtResource("2_wlkk7")

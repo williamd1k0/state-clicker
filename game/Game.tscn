@@ -1,0 +1,73 @@
+[gd_scene load_steps=14 format=3 uid="uid://y5vk3vpi8nql"]
+
+[ext_resource type="Script" path="res://game/Game.gd" id="1_gfash"]
+[ext_resource type="PackedScene" uid="uid://e6uplr27tb2c" path="res://game/Clicker.tscn" id="1_p57uu"]
+[ext_resource type="PackedScene" uid="uid://clm5825tm2dsq" path="res://game/ClickCounter.tscn" id="2_cweh3"]
+[ext_resource type="Resource" uid="uid://lg7ku6kx4g24" path="res://data/states/click-state.tres" id="2_d1qsx"]
+[ext_resource type="Resource" uid="uid://bgc10o1u1y8en" path="res://data/states/cash-state.tres" id="3_1q7af"]
+[ext_resource type="PackedScene" uid="uid://v8xdoqwnoact" path="res://game/CashLabel.tscn" id="3_cet7s"]
+[ext_resource type="Resource" uid="uid://dc8d2di2bfq0x" path="res://data/states/store-state.tres" id="4_okmpl"]
+[ext_resource type="Resource" uid="uid://vo5fw218c1ms" path="res://data/states/upgrade-state.tres" id="5_d0wqq"]
+[ext_resource type="Resource" uid="uid://c20gka308ek5g" path="res://data/balancing/balancing.tres" id="5_fnbvx"]
+[ext_resource type="PackedScene" uid="uid://bfvq3l7ouxiv" path="res://game/StoreLabel.tscn" id="9_qfakp"]
+[ext_resource type="PackedScene" uid="uid://doxmf3km3dsfd" path="res://game/AutoClickerBtn.tscn" id="11_ptqwp"]
+[ext_resource type="PackedScene" uid="uid://bsvth77xqwbbf" path="res://game/AmountUpgradeBtn.tscn" id="12_5mxhc"]
+[ext_resource type="PackedScene" uid="uid://bllsgcf3m281r" path="res://game/ClickPopups.tscn" id="13_vnqe7"]
+
+[node name="Game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gfash")
+click_state = ExtResource("2_d1qsx")
+cash_state = ExtResource("3_1q7af")
+store_state = ExtResource("4_okmpl")
+upgrade_state = ExtResource("5_d0wqq")
+balancing = ExtResource("5_fnbvx")
+
+[node name="Clicker" parent="." instance=ExtResource("1_p57uu")]
+layout_mode = 1
+offset_left = -64.0
+offset_top = -88.0
+offset_right = 64.0
+offset_bottom = 40.0
+
+[node name="ClickCounter" parent="." instance=ExtResource("2_cweh3")]
+layout_mode = 1
+offset_left = 15.0
+offset_top = 5.0
+offset_right = 133.0
+offset_bottom = 44.0
+
+[node name="CashLabel" parent="." instance=ExtResource("3_cet7s")]
+layout_mode = 1
+
+[node name="StoreLabel" parent="." instance=ExtResource("9_qfakp")]
+layout_mode = 1
+
+[node name="ClickPopups" parent="." instance=ExtResource("13_vnqe7")]
+layout_mode = 1
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -101.0
+offset_top = -81.0
+offset_right = 101.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="AmountUpgradeBtn" parent="VBoxContainer" instance=ExtResource("12_5mxhc")]
+layout_mode = 2
+
+[node name="AutoClickerBtn" parent="VBoxContainer" instance=ExtResource("11_ptqwp")]
+layout_mode = 2

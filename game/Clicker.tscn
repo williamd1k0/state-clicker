@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://e6uplr27tb2c"]
+
+[ext_resource type="Texture2D" uid="uid://didam4p0cyf13" path="res://icon.svg" id="1_1chjq"]
+[ext_resource type="Script" path="res://game/Clicker.gd" id="2_2uapt"]
+[ext_resource type="Resource" uid="uid://lg7ku6kx4g24" path="res://data/states/click-state.tres" id="3_bc3ok"]
+[ext_resource type="Resource" uid="uid://vo5fw218c1ms" path="res://data/states/upgrade-state.tres" id="4_ehirk"]
+
+[node name="Clicker" type="TextureButton"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+action_mode = 0
+texture_normal = ExtResource("1_1chjq")
+script = ExtResource("2_2uapt")
+click_state = ExtResource("3_bc3ok")
+upgrade_state = ExtResource("4_ehirk")

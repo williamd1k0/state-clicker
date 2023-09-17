@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="StoreState" load_steps=2 format=3 uid="uid://dc8d2di2bfq0x"]
+
+[ext_resource type="Script" path="res://data/states/base/StoreState.gd" id="1_50l77"]
+
+[resource]
+script = ExtResource("1_50l77")
+sell_batch = 10
+sell_price = 100

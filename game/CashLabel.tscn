@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://v8xdoqwnoact"]
+
+[ext_resource type="Script" path="res://game/CashLabel.gd" id="1_tf2s6"]
+[ext_resource type="Resource" uid="uid://bgc10o1u1y8en" path="res://data/states/cash-state.tres" id="2_r7hx3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5rcba"]
+font_size = 26
+
+[node name="CashLabel" type="Label"]
+offset_left = 15.0
+offset_top = 45.0
+offset_right = 133.0
+offset_bottom = 84.0
+text = "$%.2f"
+label_settings = SubResource("LabelSettings_5rcba")
+script = ExtResource("1_tf2s6")
+cash_state = ExtResource("2_r7hx3")

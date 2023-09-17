@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="ClickState" load_steps=2 format=3 uid="uid://lg7ku6kx4g24"]
+
+[ext_resource type="Script" path="res://data/states/base/ClickState.gd" id="1_iffy7"]
+
+[resource]
+script = ExtResource("1_iffy7")

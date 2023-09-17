@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://bllsgcf3m281r"]
+
+[ext_resource type="Script" path="res://game/ClickPopups.gd" id="1_euu5l"]
+[ext_resource type="PackedScene" uid="uid://0pbwgly32g7" path="res://game/ClickPopup.tscn" id="1_ok4l2"]
+[ext_resource type="Resource" uid="uid://lg7ku6kx4g24" path="res://data/states/click-state.tres" id="3_v7hk3"]
+
+[node name="ClickPopups" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 70.0
+offset_top = -64.0
+offset_right = 115.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_euu5l")
+click_popup = ExtResource("1_ok4l2")
+click_state = ExtResource("3_v7hk3")
+
+[node name="ClickPopup" parent="." instance_placeholder="res://game/ClickPopup.tscn"]
+layout_mode = 1
