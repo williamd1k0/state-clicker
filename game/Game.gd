@@ -2,7 +2,7 @@ extends Control
 
 @export var click_state :ClickState
 @export var cash_state :CashState
-@export var store_state :StoreState
+@export var shop_state :ShopState
 @export var upgrade_state :UpgradeState
 @export var balancing :Balancing
 var tween :Tween
@@ -13,15 +13,15 @@ func _ready():
 
 func _on_clicks_updated(from:int, to:int):
 	var batch :int = 0
-	while to >= store_state.sell_batch:
+	while to >= shop_state.sell_batch:
 		batch += 1
-		to -= store_state.sell_batch
+		to -= shop_state.sell_batch
 	if batch > 0:
-		cash_state.cash += batch * store_state.sell_batch * store_state.sell_price
-		click_state.clicks -= batch * store_state.sell_batch
-		store_state.set_store_values(
-			store_state.sell_batch * balancing.sell_batch_mod,
-			store_state.sell_price * balancing.sell_price_mod
+		cash_state.cash += batch * shop_state.sell_batch * shop_state.sell_price
+		click_state.clicks -= batch * shop_state.sell_batch
+		shop_state.set_store_values(
+			shop_state.sell_batch * balancing.sell_batch_mod,
+			shop_state.sell_price * balancing.sell_price_mod
 		)
 
 func _on_auto_clicker_toggled(enabled:bool):

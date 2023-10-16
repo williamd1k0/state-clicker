@@ -1,11 +1,11 @@
 extends Label
 
-@export var store_state :StoreState
+@export var shop_state :ShopState
 @onready var tmp :String = text
 
 func _ready():
-	store_state.values_updated.connect(update_store_values)
-	update_store_values()
+	shop_state.values_updated.connect(update_shop_values)
+	update_shop_values()
 
-func update_store_values():
-	text = tmp % [store_state.sell_batch, store_state.sell_price / 100.0]
+func update_shop_values():
+	text = tmp % [shop_state.sell_batch, shop_state.sell_price / 100.0]

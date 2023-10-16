@@ -6,7 +6,7 @@
 [ext_resource type="Resource" uid="uid://lg7ku6kx4g24" path="res://data/states/click-state.tres" id="2_d1qsx"]
 [ext_resource type="Resource" uid="uid://bgc10o1u1y8en" path="res://data/states/cash-state.tres" id="3_1q7af"]
 [ext_resource type="PackedScene" uid="uid://v8xdoqwnoact" path="res://game/CashLabel.tscn" id="3_cet7s"]
-[ext_resource type="Resource" uid="uid://dc8d2di2bfq0x" path="res://data/states/store-state.tres" id="4_okmpl"]
+[ext_resource type="Resource" uid="uid://dc8d2di2bfq0x" path="res://data/states/shop-state.tres" id="4_slr8d"]
 [ext_resource type="Resource" uid="uid://vo5fw218c1ms" path="res://data/states/upgrade-state.tres" id="5_d0wqq"]
 [ext_resource type="Resource" uid="uid://c20gka308ek5g" path="res://data/balancing/balancing.tres" id="5_fnbvx"]
 [ext_resource type="PackedScene" uid="uid://bfvq3l7ouxiv" path="res://game/StoreLabel.tscn" id="9_qfakp"]
@@ -24,7 +24,7 @@ grow_vertical = 2
 script = ExtResource("1_gfash")
 click_state = ExtResource("2_d1qsx")
 cash_state = ExtResource("3_1q7af")
-store_state = ExtResource("4_okmpl")
+shop_state = ExtResource("4_slr8d")
 upgrade_state = ExtResource("5_d0wqq")
 balancing = ExtResource("5_fnbvx")
 
@@ -45,7 +45,7 @@ offset_bottom = 44.0
 [node name="CashLabel" parent="." instance=ExtResource("3_cet7s")]
 layout_mode = 1
 
-[node name="StoreLabel" parent="." instance=ExtResource("9_qfakp")]
+[node name="ShopLabel" parent="." instance=ExtResource("9_qfakp")]
 layout_mode = 1
 
 [node name="ClickPopups" parent="." instance=ExtResource("13_vnqe7")]

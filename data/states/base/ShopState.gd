@@ -1,4 +1,4 @@
-class_name StoreState
+class_name ShopState
 extends Resource
 
 signal values_updated
